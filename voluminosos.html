@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwaste - Residuos Voluminosos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Smartwaste Logo" class="sidebar-logo">
+            <h2>Smartwaste</h2>
+            <span class="location">Madrid, Cundinamarca</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li class="active"><a href="voluminosos.html">🛋️ Residuos Voluminosos</a></li>
+                <li><a href="gamificacion.html">🎁 Puntos y Beneficios</a></li>
+                <li><a href="reportes.html">📄 Reportes PGIRS</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <header class="top-header">
+            <div>
+                <h1>Gestión de Residuos Voluminosos</h1>
+                <p>Agendamiento e inspección de escombros, muebles y colchones</p>
+            </div>
+            <button id="btnNuevaSolicitud" class="btn-primary" style="width: auto; padding: 0.6rem 1.2rem;">+ Nueva Solicitud</button>
+        </header>
+
+        <!-- Tabla de Solicitudes -->
+        <section class="card">
+            <h2>Solicitudes Programadas</h2>
+            <div style="overflow-x: auto; margin-top: 1rem;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Residente</th>
+                            <th>Ubicación</th>
+                            <th>Tipo de Residuo</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaVoluminosos">
+                        <tr>
+                            <td>#VOL-101</td>
+                            <td>Carlos Pérez</td>
+                            <td>Torre 3 - Apt 402</td>
+                            <td>Sofá 3 Puestos</td>
+                            <td>2026-10-25</td>
+                            <td><span class="badge warning-badge">Pendiente</span></td>
+                            <td><button class="btn-action" onclick="aprobarSolicitud(101)">Aprobar</button></td>
+                        </tr>
+                        <tr>
+                            <td>#VOL-102</td>
+                            <td>María Gómez</td>
+                            <td>Torre 1 - Apt 201</td>
+                            <td>Escombros (5 bultos)</td>
+                            <td>2026-10-24</td>
+                            <td><span class="badge ok-badge">Programado</span></td>
+                            <td><button class="btn-action done" onclick="finalizarSolicitud(102)">Recogido</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="voluminosos.js"></script>
+</body>
+</html>

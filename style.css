@@ -1,0 +1,490 @@
+/* Layout General del Dashboard */
+.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--gris-fondo);
+}
+
+/* Barra Lateral (Sidebar) */
+.sidebar {
+  width: 260px;
+  background-color: var(--verde-eco);
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-header {
+  text-align: center;
+}
+
+.sidebar-logo {
+  width: 90px;
+  height: auto;
+}
+
+.sidebar-header h2 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.3rem;
+}
+
+.sidebar-header .location {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar-nav li.active a, .sidebar-nav a:hover {
+  background-color: var(--verde-medio);
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: transparent;
+  border: 1px solid var(--blanco);
+  color: var(--blanco);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Área de Contenido Principal */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.top-header h1 {
+  margin: 0;
+  color: var(--verde-eco);
+}
+
+.user-badge {
+  background-color: var(--verde-hoja);
+  color: var(--blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* Cuadrícula de Métricas */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--blanco);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.metric-icon {
+  font-size: 2rem;
+}
+
+.metric-data h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--verde-eco);
+}
+
+.metric-data p {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Detalles del Dashboard */
+.dashboard-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: var(--gris-fondo);
+  border-radius: 8px;
+}
+
+.badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.warning-badge {
+  background-color: #ffeaa7;
+  color: #d63031;
+}
+
+.ok-badge {
+  background-color: #c8d6e5;
+  color: #222f3e;
+}
+
+.campaign-banner {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+/* ==========================================
+   1. VARIABLES Y ESTILOS GLOBALES
+   ========================================== */
+:root {
+  --verde-eco: #1B4D2E;
+  --verde-medio: #2D6A4F;
+  --verde-hoja: #72B043;
+  --azul-agua: #4A90E2;
+  --blanco: #FFFFFF;
+  --gris-fondo: #F4F7F6;
+  --texto: #1C2826;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gris-fondo);
+  color: var(--texto);
+}
+
+/* ==========================================
+   2. ESTILOS PANTALLA DE LOGIN (index.html)
+   ========================================== */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--verde-eco), var(--verde-medio));
+}
+
+.login-card {
+  background: var(--blanco);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card img.logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  color: var(--verde-medio);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--verde-eco);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--verde-hoja);
+}
+
+/* ==========================================
+   3. ESTILOS DEL DASHBOARD Y NAVEGACIÓN
+   ========================================== */
+.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--gris-fondo);
+}
+
+.sidebar {
+  width: 260px;
+  background-color: var(--verde-eco);
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-header {
+  text-align: center;
+}
+
+.sidebar-logo {
+  width: 90px;
+  height: auto;
+}
+
+.sidebar-header h2 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.3rem;
+}
+
+.sidebar-header .location {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar-nav li.active a, .sidebar-nav a:hover {
+  background-color: var(--verde-medio);
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: transparent;
+  border: 1px solid var(--blanco);
+  color: var(--blanco);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.top-header h1 {
+  margin: 0;
+  color: var(--verde-eco);
+}
+
+.user-badge {
+  background-color: var(--verde-hoja);
+  color: var(--blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--blanco);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.metric-icon {
+  font-size: 2rem;
+}
+
+.metric-data h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--verde-eco);
+}
+
+.metric-data p {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.dashboard-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: var(--gris-fondo);
+  border-radius: 8px;
+}
+
+.badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.warning-badge {
+  background-color: #ffeaa7;
+  color: #d63031;
+}
+
+.ok-badge {
+  background-color: #c8d6e5;
+  color: #222f3e;
+}
+
+.campaign-banner {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* ==========================================
+   4. ESTILOS DE TABLAS Y ACCIONES
+   ========================================== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th, .data-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background-color: var(--gris-fondo);
+  color: var(--verde-eco);
+  font-weight: bold;
+}
+
+.btn-action {
+  background-color: var(--verde-eco);
+  color: var(--blanco);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-action.done {
+  background-color: var(--verde-hoja);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwaste - Panel Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Menú Lateral de Navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Smartwaste Logo" class="sidebar-logo">
+            <h2>Smartwaste</h2>
+            <span class="location">Madrid, Cundinamarca</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active"><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="voluminosos.html">🛋️ Residuos Voluminosos</a></li>
+                <li><a href="gamificacion.html">🎁 Puntos y Beneficios</a></li>
+                <li><a href="reportes.html">📄 Reportes PGIRS</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Encabezado del Dashboard -->
+        <header class="top-header">
+            <div>
+                <h1>Panel de Control Ambiental</h1>
+                <p>Gestión de acopio y recolección para la copropiedad</p>
+            </div>
+            <div class="user-badge">
+                <span id="userRoleBadge">Administrador</span>
+            </div>
+        </header>
+
+        <!-- Tarjetas de Métricas Ambientales -->
+        <section class="metrics-grid">
+            <div class="card metric-card">
+                <div class="metric-icon">♻️</div>
+                <div class="metric-data">
+                    <h3 id="kgReciclados">1,240 Kg</h3>
+                    <p>Material Aprovechable Este Mes</p>
+                </div>
+            </div>
+
+            <div class="card metric-card">
+                <div class="metric-icon">🌱</div>
+                <div class="metric-data">
+                    <h3 id="co2Evitado">850 Kg</h3>
+                    <p>Emisiones CO₂ Evitadas</p>
+                </div>
+            </div>
+
+            <div class="card metric-card">
+                <div class="metric-icon">🛋️</div>
+                <div class="metric-data">
+                    <h3 id="solicitudesPendientes">4</h3>
+                    <p>Recolecciones Voluminosas Pendientes</p>
+                </div>
+            </div>
+
+            <div class="card metric-card">
+                <div class="metric-icon">⭐</div>
+                <div class="metric-data">
+                    <h3 id="puntosEntregados">15,800</h3>
+                    <p>Puntos Ecológicos Otorgados</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Estado de Cuartos de Acopio y Campañas -->
+        <section class="dashboard-details">
+            
+            <!-- Estado de Shuts y Cuartos de Acopio -->
+            <div class="card detail-card">
+                <h2>Estado de Cuartos de Acopio / Shuts</h2>
+                <div class="status-list">
+                    <div class="status-item warning">
+                        <span>Torre 1 - Cuarto Principal</span>
+                        <span class="badge warning-badge">85% Capacidad (Alerta)</span>
+                    </div>
+                    <div class="status-item ok">
+                        <span>Torre 2 - Shut de Basuras</span>
+                        <span class="badge ok-badge">40% Capacidad</span>
+                    </div>
+                    <div class="status-item ok">
+                        <span>Torre 3 - Shut de Basuras</span>
+                        <span class="badge ok-badge">30% Capacidad</span>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 1.5rem; color: var(--verde-eco);">Punto de Acopio Físico</h3>
+                <img src="img/local.png" alt="Local Smartwaste Madrid" class="campaign-banner">
+            </div>
+
+            <!-- Material Promocional / Campaña -->
+            <div class="card detail-card banner-card">
+                <h2>Campaña de Sensibilización</h2>
+                <img src="img/afiche.png" alt="Afiche Smartwaste" class="campaign-banner" style="max-height: 350px;">
+                <p style="font-size: 0.85rem; color: #555; margin-top: 0.5rem; text-align: center;">
+                    "Un municipio más limpio también está en tus manos" — Madrid, Cundinamarca
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

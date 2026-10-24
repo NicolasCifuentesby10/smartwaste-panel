@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwaste - Gamificación y Puntos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Smartwaste Logo" class="sidebar-logo">
+            <h2>Smartwaste</h2>
+            <span class="location">Madrid, Cundinamarca</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="voluminosos.html">🛋️ Residuos Voluminosos</a></li>
+                <li class="active"><a href="gamificacion.html">🎁 Puntos y Beneficios</a></li>
+                <li><a href="reportes.html">📄 Reportes PGIRS</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <header class="top-header">
+            <div>
+                <h1>Puntos Ecológicos y Beneficios</h1>
+                <p>Incentivos por separación en la fuente para los residentes</p>
+            </div>
+            <button id="btnNuevoBeneficio" class="btn-primary" style="width: auto; padding: 0.6rem 1.2rem;">+ Crear Beneficio</button>
+        </header>
+
+        <!-- Catálogo de Beneficios -->
+        <section class="metrics-grid">
+            <div class="card">
+                <h3>🎟️ Descuento Administración</h3>
+                <p>10% de descuento en el pago de administración del siguiente mes.</p>
+                <p><strong>Costo:</strong> 500 Puntos</p>
+                <button class="btn-action" onclick="canjear(500)">Asignar a Residente</button>
+            </div>
+
+            <div class="card">
+                <h3>🚗 Parqueadero Preferencial</h3>
+                <p>Uso de parqueadero de visitantes por un fin de semana completo.</p>
+                <p><strong>Costo:</strong> 300 Puntos</p>
+                <button class="btn-action" onclick="canjear(300)">Asignar a Residente</button>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Kit de Jardinería</h3>
+                <p>Bolsas biodegradables y maceta compostable para el apartamento.</p>
+                <p><strong>Costo:</strong> 150 Puntos</p>
+                <button class="btn-action" onclick="canjear(150)">Asignar a Residente</button>
+            </div>
+        </section>
+
+        <!-- Galería de Productos del Programa Eco-Puntos -->
+        <section class="card" style="margin-top: 2rem;">
+            <h2>Kits Ecológicos Disponibles para Redención</h2>
+            <p>Los residentes pueden redimir sus puntos acumulados por material institucional y merchandising de la campaña:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                <div>
+                    <img src="img/marketing2.png" alt="Kit Institucional Smartwaste" style="width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+                    <p style="font-size: 0.85rem; text-align: center; color: #666; margin-top: 0.5rem;">Kit Oficial: Botella, Cuaderno y Gorra Eco</p>
+                </div>
+                <div>
+                    <img src="img/tarjeta.png" alt="Tarjeta de Beneficios Smartwaste" style="width: 100%; border-radius: 8px; border: 1px solid #ddd;">
+                    <p style="font-size: 0.85rem; text-align: center; color: #666; margin-top: 0.5rem;">Tarjeta de Puntos y Contacto Directo</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="gamificacion.js"></script>
+</body>
+</html>

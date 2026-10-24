@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwaste - Reportes PGIRS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Menú Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/logo.png" alt="Smartwaste Logo" class="sidebar-logo">
+            <h2>Smartwaste</h2>
+            <span class="location">Madrid, Cundinamarca</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="voluminosos.html">🛋️ Residuos Voluminosos</a></li>
+                <li><a href="gamificacion.html">🎁 Puntos y Beneficios</a></li>
+                <li class="active"><a href="reportes.html">📄 Reportes PGIRS</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <header class="top-header">
+            <div>
+                <h1>Generador de Reportes PGIRS</h1>
+                <p>Certificados de disposición final y cumplimiento normativo ambiental</p>
+            </div>
+        </header>
+
+        <section class="card">
+            <h2>Generar Reporte Oficial</h2>
+            <p>Seleccione el periodo para descargar el informe mensual consolidado para la administración y autoridades ambientales:</p>
+
+            <div style="display: flex; gap: 1rem; margin: 1.5rem 0;">
+                <div class="form-group" style="flex: 1;">
+                    <label for="mesReporte">Mes de Reporte</label>
+                    <select id="mesReporte">
+                        <option value="octubre">Octubre 2026</option>
+                        <option value="septiembre">Septiembre 2026</option>
+                        <option value="agosto">Agosto 2026</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="tipoFormato">Formato</label>
+                    <select id="tipoFormato">
+                        <option value="pdf">Documento PDF Oficial</option>
+                        <option value="excel">Excel (Datos brutos)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="btnGenerarReporte" class="btn-primary" style="width: auto; padding: 0.8rem 2rem;">Descargar Reporte PGIRS</button>
+        </section>
+
+        <!-- Sección Guía de Identidad y Certificación PGIRS -->
+        <section class="card" style="margin-top: 2rem;">
+            <h2>Manual de Criterios PGIRS e Identidad Visual</h2>
+            <p>Fundamentación técnica de la psicología de colores, elementos y mascotas ambientales utilizadas en el sistema:</p>
+            <div style="text-align: center; margin-top: 1rem;">
+                <img src="img/infografia.png" alt="Infografía de Identidad Corporativa Smartwaste" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="reportes.js"></script>
+</body>
+</html>
